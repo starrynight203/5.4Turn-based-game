@@ -1,5 +1,6 @@
 var $ = require ('jquery');
 var _ = require ('underscore');
+var handlebars = require ('handlebars');
 
 function Player(options){
  options = options || {};
@@ -22,4 +23,25 @@ $('.attack-button').on('click', function(){
  console.log(kitten.health);
  $('.puppies .health').text(puppy.health);
  console.log(puppy.health);
+});
+
+function Puppyplayer(name){
+  name = 'Bonnie' || 'Rover'|| 'Lola';
+}
+
+Puppyplayer.prototype = new Player();
+
+function Kittyplayer(name){
+  name = 'Felix' || 'Oliver' || 'Callie';
+}
+
+$('.dropdown-toggle').on('click', function(){
+
+});
+
+$(".btn1").click(function(){
+    $("ul").slideUp();
+});
+$(".btn2").click(function(){
+    $("ul").slideDown();
 });
